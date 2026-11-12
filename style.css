@@ -465,44 +465,38 @@ body.manual-body {
 
 .audio-control-strip {
   display: flex;
-  flex-direction: column;
-  gap: 6px;
+  justify-content: center;
+  align-items: center;
+  min-height: 42px;
 }
 
-.manual-dial-btn {
-  width: 100%;
-  padding: 10px 14px;
-  font-family: var(--font-typewriter);
-  font-size: 0.76rem;
-  font-weight: bold;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.dial-red {
-  background: var(--red-primary);
-}
-.dial-red:hover {
-  background: var(--red-dark);
-  box-shadow: 0 4px 12px rgba(136, 19, 55, 0.4);
-}
-
-.dial-blue {
-  background: var(--blue-primary);
-}
-.dial-blue:hover {
-  background: var(--blue-dark);
-  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.4);
-}
-
-.audio-specs {
-  font-family: var(--font-typewriter);
-  font-size: 0.64rem;
-  color: var(--ink-secondary);
+.toy-mark {
+  display: inline-block;
+  font-size: 1.8rem;
+  line-height: 1;
   text-align: center;
+  user-select: none;
+}
+
+/* GARABATO DE INVISIBLE BOY: rechazo escrito con crayón morado */
+.crayon-strike {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.crayon-strike::after {
+  content: "";
+  position: absolute;
+  left: -3%;
+  top: 52%;
+  width: 106%;
+  height: 4px;
+  background: var(--crayon-purple);
+  border-radius: 50%;
+  transform: rotate(-4deg);
+  box-shadow: 0 1px 0 rgba(126, 34, 206, 0.28);
+  pointer-events: none;
 }
 
 /* NOTA ÚNICA DEL DIARIO DE MAMÁ (FUNDAMENTO DISCIPLINARIO) */
